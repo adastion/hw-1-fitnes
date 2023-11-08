@@ -2,9 +2,37 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   color: white;
+  font-family: "Popins", sans-serif;
+}
+
+.wrapper {
+  padding: 0 64px;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.gallery li {
+  max-width: 280px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.gallery li img {
+  max-width: 100%;
+  aspect-ratio: 1/0.686;
+  object-fit: cover;
 }

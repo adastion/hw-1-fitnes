@@ -6,16 +6,28 @@ const exerciseData = {
         deadlift: {
           nameExercises: "Deadlift",
           approaches: [
-            'First approach with 50 kg 10 repetitions',
-            'Second approach with 40 kg 15 repetitions',
-            'Third approach with 35 kg 12 repetitions',
-            'Fourth approach with 35 kg 12 repetitions',
+            "First approach with 50 kg 10 repetitions",
+            "Second approach with 40 kg 15 repetitions",
+            "Third approach with 35 kg 12 repetitions",
+            "Fourth approach with 35 kg 12 repetitions",
           ],
           images: [
-            "images/deadlift-01.webp",
-            "images/deadlift-02.webp",
-            "images/deadlift-03.webp",
-            "images/deadlift-04.webp",
+            {
+              jpg: "images/deadlift-01.jpg",
+              webp: "images/deadlift-01.webp",
+            },
+            {
+              jpg: "images/deadlift-02.jpg",
+              webp: "images/deadlift-02.webp",
+            },
+            {
+              jpg: "images/deadlift-03.jpg",
+              webp: "images/deadlift-03.webp",
+            },
+            {
+              jpg: "images/deadlift-04.jpg",
+              webp: "images/deadlift-04.webp",
+            },
           ],
         },
         pullUpsChinUps: {
@@ -90,7 +102,12 @@ document.write(`<div class='wrapper'>`);
                       document.write(`<ul class='gallery'>`)
                       for (let i = 0; i < exerciseData.exercises[0].exercisesDay.deadlift.images.length; i++) {
                         let picturePreview = exerciseData.exercises[0].exercisesDay.deadlift.images[i];
-                        document.write(`<li class='gallery__item'><img src=${picturePreview} alt='images-preview'></li>`)
+                        document.write(`<li>
+                                          <pictures>
+                                                <source srcset=${picturePreview.webp}>
+                                                <img src=${picturePreview.jpg} alt='images-preview'>
+                                           </pictures>
+                                        </li>`)
                       }
                                              
                     document.write(`</ul>`)
