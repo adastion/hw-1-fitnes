@@ -154,11 +154,7 @@ const exerciseData = {
               {
                 approachName: 'Fourth approach',             
                 repetitions: '12',              
-              },          
-              {
-                approachName: 'Fourth approach',             
-                repetitions: '12',              
-              },          
+              },                    
             ],
             images: [
               {
