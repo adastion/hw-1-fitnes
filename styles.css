@@ -7,9 +7,69 @@
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: #0a0a0a;
   color: white;
-  font-family: "Popins", sans-serif;
+}
+
+h1 {
+  font-size: 200px;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+h1 + * {
+  margin-top: 30px;
+}
+
+h1 span {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+h2 + * {
+  margin-top: 12px;
+}
+
+h3 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.833px;
+}
+
+h3 + * {
+  margin-top: 10px;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+ol {
+  padding-left: 50px;
+}
+
+ol + * {
+  margin-top: 42px;
+}
+
+li + li {
+  margin-top: 4px;
+}
+
+header {
+  background-image: url("./images/bg-banner.png"), url("./images/decor.png");
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position-x: 290px;
+  /* background-position: left; */
 }
 
 .errorMessege {
@@ -18,6 +78,21 @@ body {
 
 .wrapper {
   padding: 0 64px;
+  font-family: "Popins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+.day {
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 60px;
+}
+
+.day + * {
+  margin-top: 60px;
 }
 
 .gallery {
@@ -39,4 +114,8 @@ body {
   max-width: 100%;
   aspect-ratio: 1/0.686;
   object-fit: cover;
+}
+
+.gallery + * {
+  margin-top: 60px;
 }

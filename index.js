@@ -184,8 +184,10 @@ const exerciseData = {
 const trainingDays = exerciseData.exercises;
 
 document.write(`<div class='wrapper'>`);
-      document.write(`<h1>Online fitness</h1>`);
-      document.write(`<h2>Exercises</h2>`);
+      document.write(`<header>`);
+          document.write(`<h1>Online fitness</h1>`);
+          document.write(`<h2>Exercises</h2>`);
+        document.write(`</header>`);
       document.write(`<div class='content'>`);
 
           for (let day = 0; day < trainingDays.length; day++) {
@@ -193,8 +195,7 @@ document.write(`<div class='wrapper'>`);
           
 
            document.write(`<h3>${trainingDay.dayName}</h3>`);
-           document.write(`<div class='day'>`);
-              document.write(`<div class='day__block'>`);
+            document.write(`<section class='day'>`);              
 
                   for (let typeExercise = 0; typeExercise < trainingDay.exercisesDay.typesOfExercise.length; typeExercise++) {
                     let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
@@ -224,9 +225,8 @@ document.write(`<div class='wrapper'>`);
                       );
                     };
                     document.write(`</ul>`);
-                  };      
-              document.write(`</div'>`);
-           document.write(`</div>`);
+                  };                    
+            document.write(`</section>`);
         };
       document.write(`</div>`);
-document.write(`</.div>`);
+document.write(`</div>`);
