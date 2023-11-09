@@ -3,115 +3,234 @@ const exerciseData = {
     {
       dayName: "Monday",
       exercisesDay: {
-        deadlift: {
-          nameExercises: "Deadlift",
-          approaches: [
-            "First approach with 50 kg 10 repetitions",
-            "Second approach with 40 kg 15 repetitions",
-            "Third approach with 35 kg 12 repetitions",
-            "Fourth approach with 35 kg 12 repetitions",
-          ],
-          images: [
-            {
-              jpg: "images/deadlift-01.jpg",
-              webp: "images/deadlift-01.webp",
-            },
-            {
-              jpg: "images/deadlift-02.jpg",
-              webp: "images/deadlift-02.webp",
-            },
-            {
-              jpg: "images/deadlift-03.jpg",
-              webp: "images/deadlift-03.webp",
-            },
-            {
-              jpg: "images/deadlift-04.jpg",
-              webp: "images/deadlift-04.webp",
-            },
-          ],
-        },
-        pullUpsChinUps: {
-          nameExercises: "Pull-ups & Chin-ups",
-          approaches: [
-            { repetitions: 10 },
-            { repetitions: 15 },
-            { repetitions: 12 },
-            { repetitions: 12 },
-          ],
-          images: [
-            "pullups_image1.jpg",
-            "pullups_image2.jpg",
-            "pullups_image3.jpg",
-            "pullups_image4.jpg",
-          ],
-        },
+        typesOfExercise: [
+          {
+            nameExercises: "Deadlift",
+            approaches: [
+              {
+                approachName: 'First approach',
+                weight: '50 kg',              
+                repetitions: '10',              
+              },
+              {
+                approachName: 'Second approach',
+                weight: '40 kg',              
+                repetitions: '15',              
+              },
+              {
+                approachName: 'Third approach',
+                weight: '35 kg',              
+                repetitions: '12',              
+              },
+              {
+                approachName: 'Fourth approach',
+                weight: '35 kg',              
+                repetitions: '12',              
+              },          
+            ],
+            images: [
+              {
+                jpg: "images/deadlift-01.jpg",
+                webp: "images/deadlift-01.webp",
+              },
+              {
+                jpg: "images/deadlift-02.jpg",
+                webp: "images/deadlift-02.webp",
+              },
+              {
+                jpg: "images/deadlift-03.jpg",
+                webp: "images/deadlift-03.webp",
+              },
+              {
+                jpg: "images/deadlift-04.jpg",
+                webp: "images/deadlift-04.webp",
+              },
+            ],
+          },
+          {
+            nameExercises: "Pull-ups & Chin-ups",
+            approaches: [
+              {
+                approachName: 'First approach',              
+                repetitions: '10',              
+              },
+              {
+                approachName: 'Second approach',              
+                repetitions: '15',              
+              },
+              {
+                approachName: 'Third approach',              
+                repetitions: '12',              
+              },
+              {
+                approachName: 'Fourth approach',              
+                repetitions: '12',              
+              },          
+            ],
+            images: [
+              {
+                jpg: "images/pullUpsChinUps-01.jpg",
+                webp: "images/pullUpsChinUps-01.webp",
+              },
+              {
+                jpg: "images/pullUpsChinUps-02.jpg",
+                webp: "images/pullUpsChinUps-02.webp",
+              },
+              {
+                jpg: "images/pullUpsChinUps-03.jpg",
+                webp: "images/pullUpsChinUps-03.webp",
+              },
+              {
+                jpg: "images/pullUpsChinUps-04.jpg",
+                webp: "images/pullUpsChinUps-04.webp",
+              },             
+            ],
+          },
+        ],
       },
     },
     {
       dayName: "Tuesday",
       exercisesDay: {
-        barbellSquats: {
-          nameExercises: "Barbell Squats",
-          approaches: [
-            { weight: "50 kg", repetitions: 10 },
-            { weight: "40 kg", repetitions: 15 },
-            { weight: "35 kg", repetitions: 12 },
-            { weight: "35 kg", repetitions: 12 },
-          ],
-          images: [
-            "squats_image1.jpg",
-            "squats_image2.jpg",
-            "squats_image3.jpg",
-            "squats_image4.jpg",
-          ],
-        },
-        dumbbellLunges: {
-          nameExercises: "Dumbbell Lunges",
-          approaches: [
-            { repetitions: 10 },
-            { repetitions: 15 },
-            { repetitions: 12 },
-            { repetitions: 12 },
-          ],
-          images: [
-            "lunges_image1.jpg",
-            "lunges_image2.jpg",
-            "lunges_image3.jpg",
-            "lunges_image4.jpg",
-          ],
-        },
+        typesOfExercise: [
+          {
+            nameExercises: "Barbell Squats",
+            approaches: [
+               {
+                approachName: 'First approach',
+                weight: '50 kg',              
+                repetitions: '10',              
+              },
+              {
+                approachName: 'Second approach',
+                weight: '40 kg',              
+                repetitions: '15',              
+              },
+              {
+                approachName: 'Third approach',
+                weight: '35 kg',              
+                repetitions: '12',              
+              },
+              {
+                approachName: 'Fourth approach',
+                weight: '35 kg',              
+                repetitions: '12',              
+              },          
+            ],
+            images: [
+              {
+                jpg: "images/barbellSquats-01.jpg",
+                webp: "images/barbellSquats-01.web",
+              },
+              {
+                jpg: "images/barbellSquats-02.jpg",
+                webp: "images/barbellSquats-02.webp",
+              },
+              {
+                jpg: "images/barbellSquats-03.jpg",
+                webp: "images/barbellSquats-03.webp",
+              },
+              {
+                jpg: "images/barbellSquats-04.jpg",
+                webp: "images/barbellSquats-04.webp",
+              }, 
+            ],
+          },
+          {
+            nameExercises: "Dumbbell Lunges",
+            approaches: [
+              {
+                approachName: 'First approach',             
+                repetitions: '10',              
+              },
+              {
+                approachName: 'Second approach',             
+                repetitions: '15',              
+              },
+              {
+                approachName: 'Third approach',             
+                repetitions: '12',              
+              },
+              {
+                approachName: 'Fourth approach',             
+                repetitions: '12',              
+              },          
+              {
+                approachName: 'Fourth approach',             
+                repetitions: '12',              
+              },          
+            ],
+            images: [
+              {
+                jpg: "images/dumbbellLunges-01.jpg",
+                webp: "images/dumbbellLunges-01.web",
+              },
+              {
+                jpg: "images/dumbbellLunges-02.jpg",
+                webp: "images/dumbbellLunges-02.webp",
+              },
+              {
+                jpg: "images/dumbbellLunges-03.jpg",
+                webp: "images/dumbbellLunges-03.webp",
+              },
+              {
+                jpg: "images/dumbbellLunges-04.jpg",
+                webp: "images/dumbbellLunges-04.webp",
+              }, 
+            ],
+          },
+        ],
       },
     },
   ],
 };
 
+const trainingDays = exerciseData.exercises;
+
 document.write(`<div class='wrapper'>`);
       document.write(`<h1>Online fitness</h1>`);
       document.write(`<h2>Exercises</h2>`);
       document.write(`<div class='content'>`);
-           document.write(`<h3>${exerciseData.exercises[0].dayName}</h3>`);
+
+          for (let day = 0; day < trainingDays.length; day++) {
+              let trainingDay = trainingDays[day]
+          
+
+           document.write(`<h3>${trainingDay.dayName}</h3>`);
            document.write(`<div class='day'>`);
               document.write(`<div class='day__block'>`);
-                    document.write(`<h4>${exerciseData.exercises[0].exercisesDay.deadlift.nameExercises}</h4>`);
+
+                  for (let typeExercise = 0; typeExercise < trainingDay.exercisesDay.typesOfExercise.length; typeExercise++) {
+                    let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
+
+                    document.write(`<h4>${exercise.nameExercises}</h4>`);
                     document.write(`<ol>`);
-                      for (let i = 0; i < exerciseData.exercises[0].exercisesDay.deadlift.approaches.length; i++) {
-                        let approach = exerciseData.exercises[0].exercisesDay.deadlift.approaches[i];
-                        document.write(`<li>${approach}</li>`);
-                      }
-                      document.write(`</ol>`);
-                      document.write(`<ul class='gallery'>`)
-                      for (let i = 0; i < exerciseData.exercises[0].exercisesDay.deadlift.images.length; i++) {
-                        let picturePreview = exerciseData.exercises[0].exercisesDay.deadlift.images[i];
-                        document.write(`<li>
-                                          <pictures>
-                                                <source srcset=${picturePreview.webp}>
-                                                <img src=${picturePreview.jpg} alt='images-preview'>
-                                           </pictures>
-                                        </li>`)
-                      }
-                                             
-                    document.write(`</ul>`)
+
+                    for (let i = 0; i < exercise.approaches.length; i++) {
+                      let approach = exercise.approaches[i];
+                      document.write(`<li>
+                            ${approach.approachName} 
+                            ${approach.weight !== undefined ? "with " + approach.weight : ""}
+                            ${approach.repetitions} repetitions</li>`);
+                    };
+                    document.write(`</ol>`);
+                    document.write(`<ul class='gallery'>`);
+
+                    for (let i = 0; i < exercise.images.length; i++) {
+                      let picturePreview = exercise.images[i];
+                      document.write(
+                        `<li>
+                          <pictures>
+                            <source srcset=${picturePreview.webp}>
+                              <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
+                          </pictures>
+                         </li>`
+                      );
+                    };
+                    document.write(`</ul>`);
+                  };      
               document.write(`</div'>`);
            document.write(`</div>`);
+        };
       document.write(`</div>`);
 document.write(`</.div>`);

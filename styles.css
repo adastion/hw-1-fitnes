@@ -12,6 +12,10 @@ body {
   font-family: "Popins", sans-serif;
 }
 
+.errorMessege {
+  color: red;
+}
+
 .wrapper {
   padding: 0 64px;
 }
