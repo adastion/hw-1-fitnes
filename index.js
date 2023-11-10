@@ -1,4 +1,12 @@
-const exerciseData = {
+const headerData = {
+  slogan: 'Fitness',
+  shortInfo: 'Get fit from anywhere with our online fitness programs!',
+  logo: 'images/logo.png',
+  graphics: 'images/bg-banner.png',
+};
+
+const pageData = {
+  nameContent: 'exercises',
   exercises: [
     {
       dayName: "Monday",
@@ -181,14 +189,21 @@ const exerciseData = {
   ],
 };
 
-const trainingDays = exerciseData.exercises;
+const nameContent = pageData.nameContent;
+const trainingDays = pageData.exercises;
 
 document.write(`<div class='wrapper'>`);
-      document.write(`<header>`);
-          document.write(`<h1>Online fitness</h1>`);
-          document.write(`<h2>Exercises</h2>`);
-        document.write(`</header>`);
-      document.write(`<div class='content'>`);
+         document.write(`<header>`);
+            document.write(`<a href='#'>`);           
+              document.write(`<img src=${headerData.logo} alt='logo'/>`);
+            document.write(`</a>`);
+            document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
+            document.write(`<p>${headerData.shortInfo}</p>`);
+            document.write(`<img src=${headerData.graphics} alt='decor'/>`);
+            document.write(`<button>Get Started</button>`);
+         document.write(`</header>`);
+         document.write(`<div class='content'>`);
+          document.write(`<h2>${nameContent}</h2>`);
 
           for (let day = 0; day < trainingDays.length; day++) {
               let trainingDay = trainingDays[day]
@@ -226,7 +241,7 @@ document.write(`<div class='wrapper'>`);
                     };
                     document.write(`</ul>`);
                   };                    
-            document.write(`</section>`);
+          document.write(`</section>`);
         };
       document.write(`</div>`);
 document.write(`</div>`);
