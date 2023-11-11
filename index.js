@@ -1,12 +1,12 @@
 const headerData = {
-  slogan: 'Fitness',
-  shortInfo: 'Get fit from anywhere with our online fitness programs!',
-  logo: 'images/logo.png',
-  graphics: 'images/bg-banner.png',
+  slogan: "Fitness",
+  shortInfo: "Get fit from anywhere with our online fitness programs!",
+  logo: "images/logo.svg",
+  graphics: "images/bg-banner.png",
 };
 
 const pageData = {
-  nameContent: 'exercises',
+  nameContent: "exercises",
   exercises: [
     {
       dayName: "Monday",
@@ -16,25 +16,25 @@ const pageData = {
             nameExercises: "Deadlift",
             approaches: [
               {
-                approachName: 'First approach',
-                weight: '50 kg',              
-                repetitions: '10',              
+                approachName: "First approach",
+                weight: "50 kg",
+                repetitions: "10",
               },
               {
-                approachName: 'Second approach',
-                weight: '40 kg',              
-                repetitions: '15',              
+                approachName: "Second approach",
+                weight: "40 kg",
+                repetitions: "15",
               },
               {
-                approachName: 'Third approach',
-                weight: '35 kg',              
-                repetitions: '12',              
+                approachName: "Third approach",
+                weight: "35 kg",
+                repetitions: "12",
               },
               {
-                approachName: 'Fourth approach',
-                weight: '35 kg',              
-                repetitions: '12',              
-              },          
+                approachName: "Fourth approach",
+                weight: "35 kg",
+                repetitions: "12",
+              },
             ],
             images: [
               {
@@ -59,21 +59,21 @@ const pageData = {
             nameExercises: "Pull-ups & Chin-ups",
             approaches: [
               {
-                approachName: 'First approach',              
-                repetitions: '10',              
+                approachName: "First approach",
+                repetitions: "10",
               },
               {
-                approachName: 'Second approach',              
-                repetitions: '15',              
+                approachName: "Second approach",
+                repetitions: "15",
               },
               {
-                approachName: 'Third approach',              
-                repetitions: '12',              
+                approachName: "Third approach",
+                repetitions: "12",
               },
               {
-                approachName: 'Fourth approach',              
-                repetitions: '12',              
-              },          
+                approachName: "Fourth approach",
+                repetitions: "12",
+              },
             ],
             images: [
               {
@@ -91,7 +91,7 @@ const pageData = {
               {
                 jpg: "images/pullUpsChinUps-04.jpg",
                 webp: "images/pullUpsChinUps-04.webp",
-              },             
+              },
             ],
           },
         ],
@@ -104,31 +104,31 @@ const pageData = {
           {
             nameExercises: "Barbell Squats",
             approaches: [
-               {
-                approachName: 'First approach',
-                weight: '50 kg',              
-                repetitions: '10',              
+              {
+                approachName: "First approach",
+                weight: "50 kg",
+                repetitions: "10",
               },
               {
-                approachName: 'Second approach',
-                weight: '40 kg',              
-                repetitions: '15',              
+                approachName: "Second approach",
+                weight: "40 kg",
+                repetitions: "15",
               },
               {
-                approachName: 'Third approach',
-                weight: '35 kg',              
-                repetitions: '12',              
+                approachName: "Third approach",
+                weight: "35 kg",
+                repetitions: "12",
               },
               {
-                approachName: 'Fourth approach',
-                weight: '35 kg',              
-                repetitions: '12',              
-              },          
+                approachName: "Fourth approach",
+                weight: "35 kg",
+                repetitions: "12",
+              },
             ],
             images: [
               {
                 jpg: "images/barbellSquats-01.jpg",
-                webp: "images/barbellSquats-01.web",
+                webp: "images/barbellSquats-04.webp",
               },
               {
                 jpg: "images/barbellSquats-02.jpg",
@@ -141,33 +141,33 @@ const pageData = {
               {
                 jpg: "images/barbellSquats-04.jpg",
                 webp: "images/barbellSquats-04.webp",
-              }, 
+              },
             ],
           },
           {
             nameExercises: "Dumbbell Lunges",
             approaches: [
               {
-                approachName: 'First approach',             
-                repetitions: '10',              
+                approachName: "First approach",
+                repetitions: "10",
               },
               {
-                approachName: 'Second approach',             
-                repetitions: '15',              
+                approachName: "Second approach",
+                repetitions: "15",
               },
               {
-                approachName: 'Third approach',             
-                repetitions: '12',              
+                approachName: "Third approach",
+                repetitions: "12",
               },
               {
-                approachName: 'Fourth approach',             
-                repetitions: '12',              
-              },                    
+                approachName: "Fourth approach",
+                repetitions: "12",
+              },
             ],
             images: [
               {
                 jpg: "images/dumbbellLunges-01.jpg",
-                webp: "images/dumbbellLunges-01.web",
+                webp: "images/dumbbellLunges-01.webp",
               },
               {
                 jpg: "images/dumbbellLunges-02.jpg",
@@ -180,7 +180,7 @@ const pageData = {
               {
                 jpg: "images/dumbbellLunges-04.jpg",
                 webp: "images/dumbbellLunges-04.webp",
-              }, 
+              },
             ],
           },
         ],
@@ -193,55 +193,62 @@ const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
 
 document.write(`<div class='wrapper'>`);
-         document.write(`<header>`);
-            document.write(`<a href='#'>`);           
-              document.write(`<img src=${headerData.logo} alt='logo'/>`);
-            document.write(`</a>`);
-            document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
-            document.write(`<p>${headerData.shortInfo}</p>`);
-            document.write(`<img src=${headerData.graphics} alt='decor'/>`);
-            document.write(`<button>Get Started</button>`);
-         document.write(`</header>`);
-         document.write(`<div class='content'>`);
-          document.write(`<h2>${nameContent}</h2>`);
+document.write(`<header>`);
+document.write(`<a href='#'>`);
+document.write(`<img src=${headerData.logo} alt='logo'/>`);
+document.write(`</a>`);
+document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
+document.write(`<p>${headerData.shortInfo}</p>`);
+document.write(`<img src=${headerData.graphics} alt='decor'/>`);
+document.write(`<button>Get Started</button>`);
+document.write(`</header>`);
+document.write(`<div class='content'>`);
+document.write(`<h2>${nameContent}</h2>`);
 
-          for (let day = 0; day < trainingDays.length; day++) {
-              let trainingDay = trainingDays[day]
-          
+for (let day = 0; day < trainingDays.length; day++) {
+  let trainingDay = trainingDays[day];
 
-           document.write(`<h3>${trainingDay.dayName}</h3>`);
-            document.write(`<section class='day'>`);              
+  document.write(`<h3>${trainingDay.dayName}</h3>`);
+  document.write(`<section class='day'>`);
 
-                  for (let typeExercise = 0; typeExercise < trainingDay.exercisesDay.typesOfExercise.length; typeExercise++) {
-                    let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
+  for (
+    let typeExercise = 0;
+    typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
+    typeExercise++
+  ) {
+    let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
 
-                    document.write(`<h4>${exercise.nameExercises}</h4>`);
-                    document.write(`<ol>`);
+    document.write(`<h4>${exercise.nameExercises}</h4>`);
+    document.write(`<ol>`);
 
-                    for (let i = 0; i < exercise.approaches.length; i++) {
-                      let approach = exercise.approaches[i];
-                      document.write(`<li>
+    for (let i = 0; i < exercise.approaches.length; i++) {
+      let approach = exercise.approaches[i];
+      document.write(`<li>
                             ${approach.approachName} 
-                            ${approach.weight !== undefined ? "with " + approach.weight : ""}
+                            ${
+                              approach.weight !== undefined
+                                ? "with " + approach.weight
+                                : ""
+                            }
                             ${approach.repetitions} repetitions</li>`);
-                    };
-                    document.write(`</ol>`);
-                    document.write(`<ul class='gallery'>`);
+    }
+    document.write(`</ol>`);
+    document.write(`<ul class='gallery'>`);
 
-                    for (let i = 0; i < exercise.images.length; i++) {
-                      let picturePreview = exercise.images[i];
-                      document.write(
-                        `<li>
-                          <pictures>
+    for (let i = 0; i < exercise.images.length; i++) {
+      let picturePreview = exercise.images[i];
+      document.write(
+        `<li>
+                          <picture>
                             <source srcset=${picturePreview.webp}>
                               <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
-                          </pictures>
+                          </picture>
                          </li>`
-                      );
-                    };
-                    document.write(`</ul>`);
-                  };                    
-          document.write(`</section>`);
-        };
-      document.write(`</div>`);
+      );
+    }
+    document.write(`</ul>`);
+  }
+  document.write(`</section>`);
+}
+document.write(`</div>`);
 document.write(`</div>`);
