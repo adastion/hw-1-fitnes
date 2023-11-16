@@ -1,3 +1,4 @@
+//data set
 const headerData = {
   slogan: "Fitness",
   shortInfo: "Get fit from anywhere with our online fitness programs!",
@@ -189,9 +190,11 @@ const pageData = {
   ],
 };
 
+//variables
 const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
 
+//rendering
 document.write(`<div class='wrapper'>`);
   document.write(`<header>`);
     document.write(`<a href='#'>`);
@@ -204,13 +207,13 @@ document.write(`<div class='wrapper'>`);
   document.write(`</header>`);
   document.write(`<div class='content'>`);
     document.write(`<h2>${nameContent}</h2>`);
-
+//rendering day
     for (let day = 0; day < trainingDays.length; day++) {
       let trainingDay = trainingDays[day];
 
       document.write(`<h3>${trainingDay.dayName}</h3>`);
       document.write(`<section class='day'>`);
-
+//rendering type exercise
       for (
         let typeExercise = 0;
         typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
@@ -220,7 +223,7 @@ document.write(`<div class='wrapper'>`);
 
         document.write(`<h4>${exercise.nameExercises}</h4>`);
         document.write(`<ol>`);
-
+//approach
         for (let i = 0; i < exercise.approaches.length; i++) {
           let approach = exercise.approaches[i];
           document.write(`<li>
@@ -234,7 +237,7 @@ document.write(`<div class='wrapper'>`);
         }
         document.write(`</ol>`);
         document.write(`<ul class='gallery'>`);
-
+//rendering picture preview
         for (let i = 0; i < exercise.images.length; i++) {
           let picturePreview = exercise.images[i];
           document.write(
