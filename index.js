@@ -193,62 +193,62 @@ const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
 
 document.write(`<div class='wrapper'>`);
-document.write(`<header>`);
-document.write(`<a href='#'>`);
-document.write(`<img src=${headerData.logo} alt='logo'/>`);
-document.write(`</a>`);
-document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
-document.write(`<p>${headerData.shortInfo}</p>`);
-document.write(`<img src=${headerData.graphics} alt='decor'/>`);
-document.write(`<button>Get Started</button>`);
-document.write(`</header>`);
-document.write(`<div class='content'>`);
-document.write(`<h2>${nameContent}</h2>`);
+  document.write(`<header>`);
+    document.write(`<a href='#'>`);
+    document.write(`<img src=${headerData.logo} alt='logo'/>`);
+    document.write(`</a>`);
+    document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
+    document.write(`<p>${headerData.shortInfo}</p>`);
+    document.write(`<img src=${headerData.graphics} alt='decor'/>`);
+    document.write(`<button>Get Started</button>`);
+  document.write(`</header>`);
+  document.write(`<div class='content'>`);
+    document.write(`<h2>${nameContent}</h2>`);
 
-for (let day = 0; day < trainingDays.length; day++) {
-  let trainingDay = trainingDays[day];
+    for (let day = 0; day < trainingDays.length; day++) {
+      let trainingDay = trainingDays[day];
 
-  document.write(`<h3>${trainingDay.dayName}</h3>`);
-  document.write(`<section class='day'>`);
+      document.write(`<h3>${trainingDay.dayName}</h3>`);
+      document.write(`<section class='day'>`);
 
-  for (
-    let typeExercise = 0;
-    typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
-    typeExercise++
-  ) {
-    let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
+      for (
+        let typeExercise = 0;
+        typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
+        typeExercise++
+      ) {
+        let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
 
-    document.write(`<h4>${exercise.nameExercises}</h4>`);
-    document.write(`<ol>`);
+        document.write(`<h4>${exercise.nameExercises}</h4>`);
+        document.write(`<ol>`);
 
-    for (let i = 0; i < exercise.approaches.length; i++) {
-      let approach = exercise.approaches[i];
-      document.write(`<li>
-                            ${approach.approachName} 
-                            ${
-                              approach.weight !== undefined
-                                ? "with " + approach.weight
-                                : ""
-                            }
-                            ${approach.repetitions} repetitions</li>`);
+        for (let i = 0; i < exercise.approaches.length; i++) {
+          let approach = exercise.approaches[i];
+          document.write(`<li>
+                                ${approach.approachName} 
+                                ${
+                                  approach.weight !== undefined
+                                    ? "with " + approach.weight
+                                    : ""
+                                }
+                                ${approach.repetitions} repetitions</li>`);
+        }
+        document.write(`</ol>`);
+        document.write(`<ul class='gallery'>`);
+
+        for (let i = 0; i < exercise.images.length; i++) {
+          let picturePreview = exercise.images[i];
+          document.write(
+            `<li>
+                              <picture>
+                                <source srcset=${picturePreview.webp}>
+                                  <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
+                              </picture>
+                            </li>`
+          );
+        }
+        document.write(`</ul>`);
+      }
+      document.write(`</section>`);
     }
-    document.write(`</ol>`);
-    document.write(`<ul class='gallery'>`);
-
-    for (let i = 0; i < exercise.images.length; i++) {
-      let picturePreview = exercise.images[i];
-      document.write(
-        `<li>
-                          <picture>
-                            <source srcset=${picturePreview.webp}>
-                              <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
-                          </picture>
-                         </li>`
-      );
-    }
-    document.write(`</ul>`);
-  }
-  document.write(`</section>`);
-}
-document.write(`</div>`);
+  document.write(`</div>`);
 document.write(`</div>`);
