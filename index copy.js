@@ -203,116 +203,125 @@ const pageData = {
 //rendering
 document.write(`<div class='wrapper'>`);
 // rendering header
-  getHeaderData(
-    headerData.slogan, 
-    headerData.shortInfo, 
-    headerData.logo, 
-    headerData.graphics
-    )
+getHeaderData(
+  headerData.slogan,
+  headerData.shortInfo,
+  headerData.logo,
+  headerData.graphics
+);
 // rendering content
-  getPageContentData(
-    pageData.nameContent, 
-    pageData.exercises,
-    renderDayTraining,
-    renderDaysTraining,
-    renderApproach,
-    renderPreview,
-    )
+getPageContentData(
+  pageData.nameContent,
+  pageData.exercises,
+  renderDayTraining,
+  renderDaysTraining,
+  renderApproach,
+  renderPreview
+);
 document.write(`</div>`);
 
 
 // creating functions
 function getHeaderData(slogan, shortInfo, pathLogo, pathBannerPicture) {
   document.write(`<header class='header'>`);
-    document.write(`<a class='logo' href='#'>`);
-      document.write(`<img src=${pathLogo} alt='logo'/>`);
-    document.write(`</a>`);
-    document.write(`<h1 class='title'>online<span>${slogan}</span></h1>`);
-    document.write(`<p class='text'>${shortInfo}</p>`);
-    document.write(`<img class='decor'src=${pathBannerPicture} alt='decor'/>`);
-    document.write(`<button class='button'>Get Started</button>`);
+  document.write(`<a class='logo' href='#'>`);
+  document.write(`<img src=${pathLogo} alt='logo'/>`);
+  document.write(`</a>`);
+  document.write(`<h1 class='title'>online<span>${slogan}</span></h1>`);
+  document.write(`<p class='text'>${shortInfo}</p>`);
+  document.write(`<img class='decor'src=${pathBannerPicture} alt='decor'/>`);
+  document.write(`<button class='button'>Get Started</button>`);
   document.write(`</header>`);
 }
 
-function getPageContentData (
-  nameContent, 
+function getPageContentData(
+  nameContent,
   trainingDays,
-  renderingDay, 
+  renderingDay,
   renderingDays,
   renderingApproaches,
   renderingPreview
 ) {
   document.write(`<div class='content'>`);
   document.write(`<h2 class='title--content'>${nameContent}</h2>`);
-//rendering day
+  // rendering day
   renderingDays(
-    renderingDay, 
+    renderingDay,
     trainingDays,
     renderingApproaches,
     renderingPreview
-)
-document.write(`</div>`);
+  );
+  document.write(`</div>`);
 }
 
-function renderDayTraining (days, renderingApproaches, renderingPreview) {
-    document.write(`<h3 class='title--day'>${days.dayName}</h3>`);
-    document.write(`<section class='day'>`);
-//rendering type exercise
-    for (
-      let typeExercise = 0;
-      typeExercise < days.exercisesDay.typesOfExercise.length;
-      typeExercise++
-    ) {
-      let exercise = days.exercisesDay.typesOfExercise[typeExercise];
+function renderDayTraining(
+  days,
+  renderingApproaches,
+  renderingPreview
+) {
+  document.write(`<h3 class='title--day'>${days.dayName}</h3>`);
+  document.write(`<section class='day'>`);
+  // rendering type exercise
+  for (
+    let typeExercise = 0;
+    typeExercise < days.exercisesDay.typesOfExercise.length;
+    typeExercise++
+  ) {
+    let exercise = days.exercisesDay.typesOfExercise[typeExercise];
 
-      document.write(`<h4 class='title--exercise'>${exercise.nameExercises}</h4>`);
-      document.write(`<ol class='approaches'>`);
-//approach
-      renderingApproaches(exercise)
+    document.write(
+      `<h4 class='title--exercise'>${exercise.nameExercises}</h4>`
+    );
+    document.write(`<ol class='approaches'>`);
+    // approach
+    renderingApproaches(exercise);
 
-      
-//rendering picture preview
-      renderingPreview(exercise)
-     
-      document.write(`</ul>`);
-    }
-    document.write(`</section>`);
- 
+    // rendering picture preview
+    renderingPreview(exercise);
+
+    document.write(`</ul>`);
+  }
+  document.write(`</section>`);
 }
 
-function renderDaysTraining (trainingDay, trainingDays, renderingApproaches, renderingPreview) {
+function renderDaysTraining(
+  renderingDay,
+  trainingDays,
+  renderingApproaches,
+  renderingPreview
+) {
   for (let day = 0; day < trainingDays.length; day++) {
-    trainingDay(trainingDays[day], renderingApproaches, renderingPreview );
+    renderingDay(trainingDays[day], renderingApproaches, renderingPreview);
   }
 }
 
-function renderApproach (exercise) {
+function renderApproach(exercise) {
   for (let i = 0; i < exercise.approaches.length; i++) {
     let approach = exercise.approaches[i];
-    document.write(`<li class='approaches__approach'>
-                          ${approach.approachName} 
-                          ${
-                            approach.weight !== undefined
-                              ? "with " + approach.weight
-                              : ""
-                          }
-                          ${approach.repetitions} repetitions
-                        </li>`);
+    document.write(
+      `<li class='approaches__approach'>
+        ${approach.approachName} 
+        ${
+          approach.weight !== undefined ? "with " + approach.weight : ""
+        }
+        ${approach.repetitions} repetitions
+      </li>`
+    );
   }
   document.write(`</ol>`);
   document.write(`<ul class='gallery'>`);
 }
 
-function renderPreview (exercise) {
+function renderPreview(exercise) {
   for (let i = 0; i < exercise.images.length; i++) {
     let picturePreview = exercise.images[i];
     document.write(
-                    `<li class='gallery__preview'>
-                        <picture>
-                          <source srcset=${picturePreview.webp}>
-                            <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
-                        </picture>
-                    </li>`
+      `<li class='gallery__preview'>
+        <picture>
+          <source srcset=${picturePreview.webp}>
+          <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
+        </picture>
+      </li>`
     );
   }
 }

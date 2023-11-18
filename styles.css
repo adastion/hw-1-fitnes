@@ -212,18 +212,16 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
-  .title > .decor {
+  .header {
+    align-items: stretch;
+  }
+  
+  .header > .decor {
     top: auto;
     right: auto;
   }
 
   .header .logo > img {
     height: 20px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .header {
-    align-items: stretch;
   }
 }
