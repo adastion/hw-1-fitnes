@@ -21,65 +21,65 @@ h6 {
   text-transform: capitalize;
 }
 
-h1 {
+.title {
   font-weight: 600;
   letter-spacing: -2px;
   line-height: 1;
   font-size: clamp(76px, 10vw, 200px);
 }
 
-h1 + * {
+.title + * {
   margin-top: 30px;
 }
 
-h1 span {
+.title span {
   display: inline-block;
   padding-left: 78px;
 }
 
-h2 {
+.title--content {
   font-size: 60px;
   font-weight: 600;
 }
 
-h2 + * {
+.title--content + * {
   margin-top: 12px;
 }
 
-h3 {
+.title--day {
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.833px;
 }
 
-h3 + * {
+.title--day + * {
   margin-top: 10px;
 }
 
-h4 {
+.title--exercise {
   font-size: 28px;
   line-height: 45px;
   font-weight: 500;
 }
 
-h4 + * {
+.title--exercise + * {
   margin-top: 10px;
 }
 
-ol {
+.approaches {
   padding-left: 50px;
 }
 
-ol + * {
+.approaches + * {
   margin-top: 42px;
 }
 
-li + li {
+.approaches__approach + li {
   margin-top: 4px;
 }
 
-header {
+.header {
   font-family: "Popins", sans-serif;
   background-image: url("./images/decor.png");
   background-repeat: no-repeat;
@@ -95,22 +95,22 @@ header {
   justify-content: center;
 }
 
-header a {
+.header .logo {
   display: block;
   margin: 38px 0;
 }
 
-header a > img {
+.header .logo > img {
   display: block;
   height: 14px;
 }
 
-header h1 {
+.header .title {
   padding: 38px 0;
   flex-grow: 1;
 }
 
-header > img {
+.header > .decor {
   max-width: 100%;
   width: 100%;
   position: absolute;
@@ -118,7 +118,7 @@ header > img {
   right: -276px;
 }
 
-header button {
+.header .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,8 +133,8 @@ header button {
   border: 0;
 }
 
-header button:hover,
-header button:focus-visible {
+.header .button:hover,
+.header .button:focus-visible {
   opacity: 0.8;
 }
 
@@ -174,13 +174,13 @@ header button:focus-visible {
   list-style: none;
 }
 
-.gallery li {
+.gallery .gallery__preview {
   max-width: 280px;
   flex-grow: 1;
   flex-shrink: 0;
 }
 
-.gallery li img {
+.gallery .gallery__preview img {
   max-width: 100%;
   aspect-ratio: 1/0.686;
   object-fit: cover;
@@ -191,12 +191,12 @@ header button:focus-visible {
 }
 
 @media screen and (max-width: 991px) {
-  h2,
-  h3 {
+  .title--content,
+  .title--day {
     text-align: center;
   }
 
-  section {
+  .day {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,18 +212,18 @@ header button:focus-visible {
 }
 
 @media screen and (max-width: 768px) {
-  header > img {
+  .title > .decor {
     top: auto;
     right: auto;
   }
 
-  header a > img {
+  .header .logo > img {
     height: 20px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  header {
+  .header {
     align-items: stretch;
   }
 }

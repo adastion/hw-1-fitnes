@@ -194,24 +194,31 @@ const pageData = {
 const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
 
+//creating objects
+let elementRoot = document.getElementById('root')
+let elementWrapper = document.createElement('div')
+let elementHeader = document.createElement('header')
+let elementPictureLogo = document.createElement('img')
+let elemetainTitle = document.createElement('h1')
+
 //rendering
 document.write(`<div class='wrapper'>`);
-  document.write(`<header>`);
-    document.write(`<a href='#'>`);
-    document.write(`<img src=${headerData.logo} alt='logo'/>`);
+  document.write(`<header class='header'>`);
+    document.write(`<a class='logo' href='#'>`);
+      document.write(`<img src=${headerData.logo} alt='logo'/>`);
     document.write(`</a>`);
-    document.write(`<h1>online<span>${headerData.slogan}</span></h1>`);
-    document.write(`<p>${headerData.shortInfo}</p>`);
-    document.write(`<img src=${headerData.graphics} alt='decor'/>`);
-    document.write(`<button>Get Started</button>`);
+    document.write(`<h1 class='title'>online<span>${headerData.slogan}</span></h1>`);
+    document.write(`<p class='text'>${headerData.shortInfo}</p>`);
+    document.write(`<img class='decor'src=${headerData.graphics} alt='decor'/>`);
+    document.write(`<button class='button'>Get Started</button>`);
   document.write(`</header>`);
   document.write(`<div class='content'>`);
-    document.write(`<h2>${nameContent}</h2>`);
+    document.write(`<h2 class='title--content'>${nameContent}</h2>`);
 //rendering day
     for (let day = 0; day < trainingDays.length; day++) {
       let trainingDay = trainingDays[day];
 
-      document.write(`<h3>${trainingDay.dayName}</h3>`);
+      document.write(`<h3 class='title--day'>${trainingDay.dayName}</h3>`);
       document.write(`<section class='day'>`);
 //rendering type exercise
       for (
@@ -221,19 +228,20 @@ document.write(`<div class='wrapper'>`);
       ) {
         let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
 
-        document.write(`<h4>${exercise.nameExercises}</h4>`);
-        document.write(`<ol>`);
+        document.write(`<h4 class='title--exercise'>${exercise.nameExercises}</h4>`);
+        document.write(`<ol class='approaches'>`);
 //approach
         for (let i = 0; i < exercise.approaches.length; i++) {
           let approach = exercise.approaches[i];
-          document.write(`<li>
+          document.write(`<li class='approaches__approach'>
                                 ${approach.approachName} 
                                 ${
                                   approach.weight !== undefined
                                     ? "with " + approach.weight
                                     : ""
                                 }
-                                ${approach.repetitions} repetitions</li>`);
+                                ${approach.repetitions} repetitions
+                              </li>`);
         }
         document.write(`</ol>`);
         document.write(`<ul class='gallery'>`);
@@ -241,7 +249,7 @@ document.write(`<div class='wrapper'>`);
         for (let i = 0; i < exercise.images.length; i++) {
           let picturePreview = exercise.images[i];
           document.write(
-            `<li>
+                            `<li class='gallery__preview'>
                               <picture>
                                 <source srcset=${picturePreview.webp}>
                                   <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
