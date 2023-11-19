@@ -18,6 +18,7 @@ function renderPage () {
   const createLogoElement = document.createElement('a')
   const createPictureLogoElement = document.createElement('img')
   const createTitleElement = document.createElement('h1')
+  const createTitleStaticElement = document.createElement('span')
   const createInfoElement = document.createElement('p')
   const createBannerElement = document.createElement('img')
   const createBtnGetStartedElement = document.createElement('button')
@@ -25,12 +26,16 @@ function renderPage () {
     createBannerElement.classList.add('decor')
     createBannerElement.src = headerData.graphics
     createInfoElement.classList.add('text')
+    createTitleElement.textContent = headerData.slogan
+    createTitleStaticElement.textContent = 'online'
+    createTitleElement.appendChild(createTitleStaticElement)
     createTitleElement.classList.add('title')
     createWrapperElement.classList.add('wrapper')
     createHeaderElement.classList.add('header')
     createLogoElement.classList.add('logo')
     createLogoElement.href = '#'
     createPictureLogoElement.src = headerData.logo
+    createBtnGetStartedElement.textContent = 'Get Started'
     createWrapperElement.appendChild(createHeaderElement)
     createHeaderElement.appendChild(createLogoElement)
     createLogoElement.appendChild(createPictureLogoElement)
@@ -41,10 +46,16 @@ function renderPage () {
 //creating Content
   const createContentElement = document.createElement('div')
   const createTitleContentElement = document.createElement('h2')
+  const createTitleDayElement = document.createElement('h3')
+  const createDayElement = document.createElement('section')
+    createDayElement.classList.add('day')
+    createTitleDayElement.classList.add('title--day')
     createContentElement.classList.add('content')
     createTitleContentElement.classList.add('title--content')
-    createContentElement.appendChild(createTitleContentElement)
     createWrapperElement.appendChild(createContentElement)
+    createContentElement.appendChild(createTitleContentElement)
+    createContentElement.appendChild(createTitleDayElement)
+    createContentElement.appendChild(createDayElement)
 
  
  
