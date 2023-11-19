@@ -12,54 +12,66 @@ renderPage ()
 
 
 function renderPage () {
-  const createWrapperElement = document.createElement('div')
-//creating Header
-  const createHeaderElement = document.createElement('header')
-  const createLogoElement = document.createElement('a')
-  const createPictureLogoElement = document.createElement('img')
-  const createTitleElement = document.createElement('h1')
-  const createTitleStaticElement = document.createElement('span')
-  const createInfoElement = document.createElement('p')
-  const createBannerElement = document.createElement('img')
-  const createBtnGetStartedElement = document.createElement('button')
-    createBtnGetStartedElement.classList.add('button')
-    createBannerElement.classList.add('decor')
-    createBannerElement.src = headerData.graphics
-    createInfoElement.classList.add('text')
-    createTitleElement.textContent = headerData.slogan
-    createTitleStaticElement.textContent = 'online'
-    createTitleElement.appendChild(createTitleStaticElement)
-    createTitleElement.classList.add('title')
-    createWrapperElement.classList.add('wrapper')
-    createHeaderElement.classList.add('header')
-    createLogoElement.classList.add('logo')
-    createLogoElement.href = '#'
-    createPictureLogoElement.src = headerData.logo
-    createBtnGetStartedElement.textContent = 'Get Started'
-    createWrapperElement.appendChild(createHeaderElement)
-    createHeaderElement.appendChild(createLogoElement)
-    createLogoElement.appendChild(createPictureLogoElement)
-    createHeaderElement.appendChild(createTitleElement)
-    createHeaderElement.appendChild(createInfoElement)
-    createHeaderElement.appendChild(createBannerElement)
-    createHeaderElement.appendChild(createBtnGetStartedElement)
-//creating Content
-  const createContentElement = document.createElement('div')
-  const createTitleContentElement = document.createElement('h2')
-  const createTitleDayElement = document.createElement('h3')
-  const createDayElement = document.createElement('section')
-    createDayElement.classList.add('day')
-    createTitleDayElement.classList.add('title--day')
-    createContentElement.classList.add('content')
-    createTitleContentElement.classList.add('title--content')
-    createWrapperElement.appendChild(createContentElement)
-    createContentElement.appendChild(createTitleContentElement)
-    createContentElement.appendChild(createTitleDayElement)
-    createContentElement.appendChild(createDayElement)
-
- 
- 
-  rootElement.appendChild(createWrapperElement)
+    const createWrapperElement = document.createElement('div')
+  //creating Header
+    const createHeaderElement = document.createElement('header')
+    const createLogoElement = document.createElement('a')
+    const createPictureLogoElement = document.createElement('img')
+    const createTitleElement = document.createElement('h1')
+    const createTitleStaticElement = document.createElement('span')
+    const createInfoElement = document.createElement('p')
+    const createBannerElement = document.createElement('img')
+    const createBtnGetStartedElement = document.createElement('button')
+      createBtnGetStartedElement.classList.add('button')
+      createBannerElement.classList.add('decor')
+      createBannerElement.src = headerData.graphics
+      createInfoElement.classList.add('text')
+      createTitleElement.textContent = headerData.slogan
+      createTitleStaticElement.textContent = 'online'
+      createTitleElement.appendChild(createTitleStaticElement)
+      createTitleElement.classList.add('title')
+      createWrapperElement.classList.add('wrapper')
+      createHeaderElement.classList.add('header')
+      createLogoElement.classList.add('logo')
+      createLogoElement.href = '#'
+      createPictureLogoElement.src = headerData.logo
+      createBtnGetStartedElement.textContent = 'Get Started'
+      createWrapperElement.appendChild(createHeaderElement)
+      createHeaderElement.appendChild(createLogoElement)
+      createLogoElement.appendChild(createPictureLogoElement)
+      createHeaderElement.appendChild(createTitleElement)
+      createHeaderElement.appendChild(createInfoElement)
+      createHeaderElement.appendChild(createBannerElement)
+      createHeaderElement.appendChild(createBtnGetStartedElement)
+  //creating Content
+    const createContentElement = document.createElement('div')
+    const createTitleContentElement = document.createElement('h2')
+    const createTitleDayElement = document.createElement('h3')
+      createTitleDayElement.classList.add('title--day')
+      createContentElement.classList.add('content')
+      createTitleContentElement.classList.add('title--content')
+      createWrapperElement.appendChild(createContentElement)
+      createContentElement.appendChild(createTitleContentElement)
+      createContentElement.appendChild(createTitleDayElement)
+      //creating Day
+    const createDayElement = document.createElement('section')
+    const createTitleExerciseElement = document.createElement('h4')
+    const createApproachesListElement = document.createElement('ol')
+    const createApproachElement = document.createElement('li')
+    const createGalleryListElement = document.createElement('ul')
+    const createPictureElement = document.createElement('li')
+      createDayElement.classList.add('day')
+      createTitleExerciseElement.classList.add('title--exercise')
+      createApproachesListElement.classList.add('approaches')
+      createApproachElement.classList.add('approaches__approach')
+      createPictureElement.classList.add('gallery__preview')
+      createContentElement.appendChild(createDayElement)
+      createContentElement.appendChild(createTitleExerciseElement)
+      createContentElement.appendChild(createApproachesListElement)
+      createContentElement.appendChild(createGalleryListElement)
+  
+  
+    rootElement.appendChild(createWrapperElement)
 }
 
 
