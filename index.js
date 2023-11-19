@@ -5,8 +5,78 @@ const pageData = getPageData()
 //variables
 const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
+const rootElement = document.querySelector('#root')
 
 //rendering
+renderPage ()
+
+
+function renderPage () {
+  const createWrapperElement = document.createElement('div')
+//creating Header
+  const createHeaderElement = document.createElement('header')
+  const createLogoElement = document.createElement('a')
+  const createPictureLogoElement = document.createElement('img')
+  const createTitleElement = document.createElement('h1')
+  const createInfoElement = document.createElement('p')
+  const createBannerElement = document.createElement('img')
+  const createBtnGetStartedElement = document.createElement('button')
+    createBtnGetStartedElement.classList.add('button')
+    createBannerElement.classList.add('decor')
+    createBannerElement.src = headerData.graphics
+    createInfoElement.classList.add('text')
+    createTitleElement.classList.add('title')
+    createWrapperElement.classList.add('wrapper')
+    createHeaderElement.classList.add('header')
+    createLogoElement.classList.add('logo')
+    createLogoElement.href = '#'
+    createPictureLogoElement.src = headerData.logo
+    createWrapperElement.appendChild(createHeaderElement)
+    createHeaderElement.appendChild(createLogoElement)
+    createLogoElement.appendChild(createPictureLogoElement)
+    createHeaderElement.appendChild(createTitleElement)
+    createHeaderElement.appendChild(createInfoElement)
+    createHeaderElement.appendChild(createBannerElement)
+    createHeaderElement.appendChild(createBtnGetStartedElement)
+//creating Content
+  const createContentElement = document.createElement('div')
+  const createTitleContentElement = document.createElement('h2')
+    createContentElement.classList.add('content')
+    createTitleContentElement.classList.add('title--content')
+    createContentElement.appendChild(createTitleContentElement)
+    createWrapperElement.appendChild(createContentElement)
+
+ 
+ 
+  rootElement.appendChild(createWrapperElement)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.write(`<div class='wrapper'>`);
   document.write(`<header class='header'>`);
     document.write(`<a class='logo' href='#'>`);
@@ -20,10 +90,10 @@ document.write(`<div class='wrapper'>`);
   document.write(`<div class='content'>`);
     document.write(`<h2 class='title--content'>${nameContent}</h2>`);
 //rendering day
-  renderDayTraining(
-    renderTypeExercise,
+  renderDaysTraining(
+    renderTypeExercises,
     renderAproaches,
-    renderPreview
+    renderPictures
   )
 
   document.write(`</div>`);
@@ -225,18 +295,22 @@ function getPageData () {
   };
 }
 
-function renderDayTraining (renderTypeExercise, renderAproaches, renderPreview) {
+function renderDaysTraining (renderTypeExercises, renderAproaches, renderPictures) {
     for (let day = 0; day < trainingDays.length; day++) {
       let trainingDay = trainingDays[day];
 
       document.write(`<h3 class='title--day'>${trainingDay.dayName}</h3>`);
       document.write(`<section class='day'>`);
 //rendering type exercise
-      renderTypeExercise(trainingDay, renderAproaches, renderPreview)
+      renderTypeExercises(trainingDay, renderAproaches, renderPictures)
     }
 }
 
-function renderTypeExercise (trainingDay, renderAproaches, renderPreview) {
+function renderDay () {
+
+}
+
+function renderTypeExercises (trainingDay, renderAproaches, renderPictures) {
   for (
     let typeExercise = 0;
     typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
@@ -250,7 +324,7 @@ function renderTypeExercise (trainingDay, renderAproaches, renderPreview) {
       document.write(`</ol>`);
       document.write(`<ul class='gallery'>`);
   //rendering picture preview
-      renderPreview(exercise)
+      renderPictures(exercise)
         document.write(`</ul>`);
       }
     document.write(`</section>`);
@@ -271,7 +345,7 @@ function renderAproaches (exercise) {
   }
 }
 
-function renderPreview (exercise) {
+function renderPictures (exercise) {
   for (let i = 0; i < exercise.images.length; i++) {
     let picturePreview = exercise.images[i];
     document.write(
