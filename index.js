@@ -7,31 +7,92 @@ const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
 const rootElement = document.querySelector("#root");
 
-//rendering
-//rendering page
-const wrapper = createMyElement("div", rootElement, "wrapper");
+
+const wrapper = createMyElement("div", document.getElementById('root'), "wrapper");
 const header = createMyElement("header", wrapper, "header");
 const logo = createMyElement("a", header, "logo", "", "", '#');
-const logoImg = createMyElement("img", logo, "logo", "", headerData.logo, "");
-const headerTitle = createMyElement("h1", header, "title", headerData.slogan, "", "");
-const headerTitleStatic = createMyElement("span", headerTitle, "", "online", "", "");
-const headerInfo = createMyElement("p", header, "text", headerData.shortInfo, "", "");
-const banner = createMyElement("img", header, "decor", "", headerData.graphics, "");
-const headerButton = createMyElement("button", header, "button", "Get Started", "", "");
+const logoImg = createMyElement("img", logo, "logo", "", headerData.logo);
+const headerTitle = createMyElement("h1", header, "title", headerData.slogan);
+const headerTitleStatic = createMyElement("span", headerTitle, "", "online");
+const headerInfo = createMyElement("p", header, "text", headerData.shortInfo);
+const banner = createMyElement("img", header, "decor", "", headerData.graphics);
+const headerButton = createMyElement("button", header, "button", "Get Started");
+const content = createMyElement("div", wrapper, "content");
+const contentTitle = createMyElement("h2", content, "title--content", nameContent);
 
-
-
+renderDaysTraining(content, trainingDays);
 
 // creating functions
-function createMyElement(teg, parentItem, addClass = "", addCntent = "", pathImage = "", pathLink = "") {
-  let Element = document.createElement(teg);
-    addClass !== "" ? Element.classList.add(addClass) : null;
-    Element.textContent = addCntent;
-    Element.src = pathImage;
-    Element.href = pathLink;
-    parentItem.appendChild(Element);
-  return Element;
+function createMyElement(tag, parentItem, addClass = "", addContent = "", pathImage = "", pathLink = "") {
+  let element = document.createElement(tag);
+  if (addClass !== "") {
+    element.classList.add(addClass);
+  }
+  if (addContent !== "") {
+    element.textContent = addContent;
+  }
+  if (pathImage !== "") {
+    element.src = pathImage;
+  }
+  if (pathLink !== "") {
+    element.href = pathLink;
+  }
+  parentItem.appendChild(element);
+  return element;
 }
+
+function renderDaysTraining(parentItem, trainingDays) {
+  for (let i = 0; i < trainingDays.length; i++) {
+    const day = trainingDays[i];
+    const daySection = createMyElement("section", parentItem, "day");
+    renderDayTraining(daySection, day);
+  }
+}
+
+function renderDayTraining(parentItem, day) {
+  const dayTitle = createMyElement("h3", parentItem, "title--day", day.dayName);
+
+  for (let i = 0; i < day.exercisesDay.typesOfExercise.length; i++) {
+    const exercise = day.exercisesDay.typesOfExercise[i];
+    const exerciseTitle = createMyElement("h4", parentItem, "title--exercise", exercise.nameExercises);
+    const approachesList = createMyElement("ol", parentItem, "approaches");
+    renderApproaches(approachesList, exercise);
+
+    const galleryList = createMyElement("ul", parentItem, "gallery");
+    renderPreview(galleryList, exercise);
+    return exerciseTitle
+  }
+}
+
+function renderApproaches(parentItem, exercise) {
+  for (let i = 0; i < exercise.approaches.length; i++) {
+    const approach = exercise.approaches[i];
+    const approachItem = createMyElement("li", parentItem, "approaches__approach");
+    let approachText = approach.approachName;
+
+    if (approach.weight !== undefined) {
+      approachText += ` with ${approach.weight}`;
+    }
+
+    approachText += ` ${approach.repetitions} repetitions`;
+    approachItem.textContent = approachText;
+  }
+}
+
+function renderPreview(parentItem, exercise) {
+  for (let i = 0; i < exercise.images.length; i++) {
+    const picturePreview = exercise.images[i];
+    const previewItem = createMyElement("li", parentItem, "gallery__preview");
+    const picture = createMyElement("picture", previewItem);
+    const sourceWebp = createMyElement("source", picture);
+    sourceWebp.srcset = picturePreview.webp;
+    const image = createMyElement("img", picture);
+    image.loading = 'lazy';
+    image.src = picturePreview.jpg;
+    image.alt = 'images-preview';
+  }
+}
+
 
 function getHeaderData() {
   return {
@@ -227,67 +288,3 @@ function getPageData() {
     ],
   };
 }
-
-// function renderDaysTraining (renderTypeExercises, renderAproaches, renderPictures) {
-//   for (let day = 0; day < trainingDays.length; day++) {
-//     let trainingDay = trainingDays[day];
-
-//     document.write(`<h3 class='title--day'>${trainingDay.dayName}</h3>`);
-//     document.write(`<section class='day'>`);
-// //rendering type exercise
-//     renderTypeExercises(trainingDay, renderAproaches, renderPictures)
-//   }
-// }
-
-// function renderDay () {
-
-// }
-
-// function renderTypeExercises (trainingDay, renderAproaches, renderPictures) {
-// for (
-//   let typeExercise = 0;
-//   typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
-//   typeExercise++
-// ) {
-//     let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
-//     document.write(`<h4 class='title--exercise'>${exercise.nameExercises}</h4>`);
-//     document.write(`<ol class='approaches'>`);
-// //approach
-//     renderAproaches(exercise)
-//     document.write(`</ol>`);
-//     document.write(`<ul class='gallery'>`);
-// //rendering picture preview
-//     renderPictures(exercise)
-//       document.write(`</ul>`);
-//     }
-//   document.write(`</section>`);
-// }
-
-// function renderAproaches (exercise) {
-// for (let i = 0; i < exercise.approaches.length; i++) {
-//   let approach = exercise.approaches[i];
-//   document.write(`<li class='approaches__approach'>
-//                         ${approach.approachName}
-//                         ${
-//                           approach.weight !== undefined
-//                             ? "with " + approach.weight
-//                             : ""
-//                         }
-//                         ${approach.repetitions} repetitions
-//                       </li>`);
-// }
-// }
-
-// function renderPictures (exercise) {
-// for (let i = 0; i < exercise.images.length; i++) {
-//   let picturePreview = exercise.images[i];
-//   document.write(
-//                     `<li class='gallery__preview'>
-//                       <picture>
-//                         <source srcset=${picturePreview.webp}>
-//                           <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
-//                       </picture>
-//                     </li>`
-//   );
-// }
-// }
