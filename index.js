@@ -1,127 +1,37 @@
 //data set
-const headerData = getHeaderData()
-const pageData = getPageData()
+const headerData = getHeaderData();
+const pageData = getPageData();
 
 //variables
 const nameContent = pageData.nameContent;
 const trainingDays = pageData.exercises;
-const rootElement = document.querySelector('#root')
+const rootElement = document.querySelector("#root");
 
 //rendering
-renderPage ()
+//rendering page
+const wrapper = createMyElement("div", rootElement, "wrapper");
+const header = createMyElement("header", wrapper, "header");
+const logo = createMyElement("a", header, "logo", "", "", '#');
+const logoImg = createMyElement("img", logo, "logo", "", headerData.logo, "");
+const headerTitle = createMyElement("h1", header, "title", headerData.slogan, "", "");
+const headerTitleStatic = createMyElement("span", headerTitle, "", "online", "", "");
+const headerInfo = createMyElement("p", header, "text", headerData.shortInfo, "", "");
+const banner = createMyElement("img", header, "decor", "", headerData.graphics, "");
+const headerButton = createMyElement("button", header, "button", "Get Started", "", "");
 
 
-function renderPage () {
-    const createWrapperElement = document.createElement('div')
-  //creating Header
-    const createHeaderElement = document.createElement('header')
-    const createLogoElement = document.createElement('a')
-    const createPictureLogoElement = document.createElement('img')
-    const createTitleElement = document.createElement('h1')
-    const createTitleStaticElement = document.createElement('span')
-    const createInfoElement = document.createElement('p')
-    const createBannerElement = document.createElement('img')
-    const createBtnGetStartedElement = document.createElement('button')
-      createBtnGetStartedElement.classList.add('button')
-      createBannerElement.classList.add('decor')
-      createBannerElement.src = headerData.graphics
-      createInfoElement.classList.add('text')
-      createTitleElement.textContent = headerData.slogan
-      createTitleStaticElement.textContent = 'online'
-      createTitleElement.appendChild(createTitleStaticElement)
-      createTitleElement.classList.add('title')
-      createWrapperElement.classList.add('wrapper')
-      createHeaderElement.classList.add('header')
-      createLogoElement.classList.add('logo')
-      createLogoElement.href = '#'
-      createPictureLogoElement.src = headerData.logo
-      createBtnGetStartedElement.textContent = 'Get Started'
-      createWrapperElement.appendChild(createHeaderElement)
-      createHeaderElement.appendChild(createLogoElement)
-      createLogoElement.appendChild(createPictureLogoElement)
-      createHeaderElement.appendChild(createTitleElement)
-      createHeaderElement.appendChild(createInfoElement)
-      createHeaderElement.appendChild(createBannerElement)
-      createHeaderElement.appendChild(createBtnGetStartedElement)
-  //creating Content
-    const createContentElement = document.createElement('div')
-    const createTitleContentElement = document.createElement('h2')
-    const createTitleDayElement = document.createElement('h3')
-      createTitleDayElement.classList.add('title--day')
-      createContentElement.classList.add('content')
-      createTitleContentElement.classList.add('title--content')
-      createWrapperElement.appendChild(createContentElement)
-      createContentElement.appendChild(createTitleContentElement)
-      createContentElement.appendChild(createTitleDayElement)
-      //creating Day
-    const createDayElement = document.createElement('section')
-    const createTitleExerciseElement = document.createElement('h4')
-    const createApproachesListElement = document.createElement('ol')
-    const createApproachElement = document.createElement('li')
-    const createGalleryListElement = document.createElement('ul')
-    const createPictureElement = document.createElement('li')
-      createDayElement.classList.add('day')
-      createTitleExerciseElement.classList.add('title--exercise')
-      createApproachesListElement.classList.add('approaches')
-      createApproachElement.classList.add('approaches__approach')
-      createPictureElement.classList.add('gallery__preview')
-      createContentElement.appendChild(createDayElement)
-      createContentElement.appendChild(createTitleExerciseElement)
-      createContentElement.appendChild(createApproachesListElement)
-      createContentElement.appendChild(createGalleryListElement)
-  
-  
-    rootElement.appendChild(createWrapperElement)
+
+
+// creating functions
+function createMyElement(teg, parentItem, addClass = "", addCntent = "", pathImage = "", pathLink = "") {
+  let Element = document.createElement(teg);
+    addClass !== "" ? Element.classList.add(addClass) : null;
+    Element.textContent = addCntent;
+    Element.src = pathImage;
+    Element.href = pathLink;
+    parentItem.appendChild(Element);
+  return Element;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.write(`<div class='wrapper'>`);
-  document.write(`<header class='header'>`);
-    document.write(`<a class='logo' href='#'>`);
-      document.write(`<img src=${headerData.logo} alt='logo'/>`);
-    document.write(`</a>`);
-    document.write(`<h1 class='title'>online<span>${headerData.slogan}</span></h1>`);
-    document.write(`<p class='text'>${headerData.shortInfo}</p>`);
-    document.write(`<img class='decor'src=${headerData.graphics} alt='decor'/>`);
-    document.write(`<button class='button'>Get Started</button>`);
-  document.write(`</header>`);
-  document.write(`<div class='content'>`);
-    document.write(`<h2 class='title--content'>${nameContent}</h2>`);
-//rendering day
-  renderDaysTraining(
-    renderTypeExercises,
-    renderAproaches,
-    renderPictures
-  )
-
-  document.write(`</div>`);
-document.write(`</div>`);
-
 
 function getHeaderData() {
   return {
@@ -132,7 +42,7 @@ function getHeaderData() {
   };
 }
 
-function getPageData () {
+function getPageData() {
   return {
     nameContent: "exercises",
     exercises: [
@@ -318,66 +228,66 @@ function getPageData () {
   };
 }
 
-function renderDaysTraining (renderTypeExercises, renderAproaches, renderPictures) {
-    for (let day = 0; day < trainingDays.length; day++) {
-      let trainingDay = trainingDays[day];
+// function renderDaysTraining (renderTypeExercises, renderAproaches, renderPictures) {
+//   for (let day = 0; day < trainingDays.length; day++) {
+//     let trainingDay = trainingDays[day];
 
-      document.write(`<h3 class='title--day'>${trainingDay.dayName}</h3>`);
-      document.write(`<section class='day'>`);
-//rendering type exercise
-      renderTypeExercises(trainingDay, renderAproaches, renderPictures)
-    }
-}
+//     document.write(`<h3 class='title--day'>${trainingDay.dayName}</h3>`);
+//     document.write(`<section class='day'>`);
+// //rendering type exercise
+//     renderTypeExercises(trainingDay, renderAproaches, renderPictures)
+//   }
+// }
 
-function renderDay () {
+// function renderDay () {
 
-}
+// }
 
-function renderTypeExercises (trainingDay, renderAproaches, renderPictures) {
-  for (
-    let typeExercise = 0;
-    typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
-    typeExercise++
-  ) {
-      let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
-      document.write(`<h4 class='title--exercise'>${exercise.nameExercises}</h4>`);
-      document.write(`<ol class='approaches'>`);
-  //approach
-      renderAproaches(exercise) 
-      document.write(`</ol>`);
-      document.write(`<ul class='gallery'>`);
-  //rendering picture preview
-      renderPictures(exercise)
-        document.write(`</ul>`);
-      }
-    document.write(`</section>`);
-  }
+// function renderTypeExercises (trainingDay, renderAproaches, renderPictures) {
+// for (
+//   let typeExercise = 0;
+//   typeExercise < trainingDay.exercisesDay.typesOfExercise.length;
+//   typeExercise++
+// ) {
+//     let exercise = trainingDay.exercisesDay.typesOfExercise[typeExercise];
+//     document.write(`<h4 class='title--exercise'>${exercise.nameExercises}</h4>`);
+//     document.write(`<ol class='approaches'>`);
+// //approach
+//     renderAproaches(exercise)
+//     document.write(`</ol>`);
+//     document.write(`<ul class='gallery'>`);
+// //rendering picture preview
+//     renderPictures(exercise)
+//       document.write(`</ul>`);
+//     }
+//   document.write(`</section>`);
+// }
 
-function renderAproaches (exercise) {
-  for (let i = 0; i < exercise.approaches.length; i++) {
-    let approach = exercise.approaches[i];
-    document.write(`<li class='approaches__approach'>
-                          ${approach.approachName} 
-                          ${
-                            approach.weight !== undefined
-                              ? "with " + approach.weight
-                              : ""
-                          }
-                          ${approach.repetitions} repetitions
-                        </li>`);
-  }
-}
+// function renderAproaches (exercise) {
+// for (let i = 0; i < exercise.approaches.length; i++) {
+//   let approach = exercise.approaches[i];
+//   document.write(`<li class='approaches__approach'>
+//                         ${approach.approachName}
+//                         ${
+//                           approach.weight !== undefined
+//                             ? "with " + approach.weight
+//                             : ""
+//                         }
+//                         ${approach.repetitions} repetitions
+//                       </li>`);
+// }
+// }
 
-function renderPictures (exercise) {
-  for (let i = 0; i < exercise.images.length; i++) {
-    let picturePreview = exercise.images[i];
-    document.write(
-                      `<li class='gallery__preview'>
-                        <picture>
-                          <source srcset=${picturePreview.webp}>
-                            <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
-                        </picture>
-                      </li>`
-    );
-  }
-}
+// function renderPictures (exercise) {
+// for (let i = 0; i < exercise.images.length; i++) {
+//   let picturePreview = exercise.images[i];
+//   document.write(
+//                     `<li class='gallery__preview'>
+//                       <picture>
+//                         <source srcset=${picturePreview.webp}>
+//                           <img loading='lazy' src=${picturePreview.jpg} alt='images-preview'>
+//                       </picture>
+//                     </li>`
+//   );
+// }
+// }
