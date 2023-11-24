@@ -81,7 +81,7 @@ h6 {
 
 .header {
   font-family: "Popins", sans-serif;
-  background-image: url("./images/decor.png");
+  background-image: url("./src/assets/images/decor.png");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: auto;
