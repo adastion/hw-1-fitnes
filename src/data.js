@@ -23,8 +23,8 @@ export function getPageData() {
                 weight: "50 kg",
                 repetitions: "10",
                 image: {
-                  jpg: "images/deadlift-01.jpg",
-                  webp: "images/deadlift-01.webp",
+                  jpg: "../src/assets/images/deadlift-01.jpg",
+                  webp: "../src/assets/images/deadlift-01.webp",
                 },
               },
               {
@@ -32,8 +32,8 @@ export function getPageData() {
                 weight: "40 kg",
                 repetitions: "15",
                 image: {
-                  jpg: "images/deadlift-02.jpg",
-                  webp: "images/deadlift-02.webp",
+                  jpg: "../src/assets/images/deadlift-02.jpg",
+                  webp: "../src/assets/images/deadlift-02.webp",
                 },
               },
               {
@@ -41,8 +41,8 @@ export function getPageData() {
                 weight: "35 kg",
                 repetitions: "12",
                 image: {
-                  jpg: "images/deadlift-03.jpg",
-                  webp: "images/deadlift-03.webp",
+                  jpg: "../src/assets/images/deadlift-03.jpg",
+                  webp: "../src/assets/images/deadlift-03.webp",
                 },
               },
               {
@@ -50,8 +50,8 @@ export function getPageData() {
                 weight: "35 kg",
                 repetitions: "12",
                 image: {
-                  jpg: "images/deadlift-04.jpg",
-                  webp: "images/deadlift-04.webp",
+                  jpg: "../src/assets/images/deadlift-04.jpg",
+                  webp: "../src/assets/images/deadlift-04.webp",
                 },
               },
             ],
@@ -63,32 +63,32 @@ export function getPageData() {
                 approachName: "First approach",
                 repetitions: "10",
                 image: {
-                  jpg: "images/pullUpsChinUps-01.jpg",
-                  webp: "images/pullUpsChinUps-01.webp",
+                  jpg: "../src/assets/images/pullUpsChinUps-01.jpg",
+                  webp: "../src/assets/images/pullUpsChinUps-01.webp",
                 },
               },
               {
                 approachName: "Second approach",
                 repetitions: "15",
                 image: {
-                  jpg: "images/pullUpsChinUps-02.jpg",
-                  webp: "images/pullUpsChinUps-02.webp",
+                  jpg: "../src/assets/images/pullUpsChinUps-02.jpg",
+                  webp: "../src/assets/images/pullUpsChinUps-02.webp",
                 },
               },
               {
                 approachName: "Third approach",
                 repetitions: "12",
                 image: {
-                  jpg: "images/pullUpsChinUps-03.jpg",
-                  webp: "images/pullUpsChinUps-03.webp",
+                  jpg: "../src/assets/images/pullUpsChinUps-03.jpg",
+                  webp: "../src/assets/images/pullUpsChinUps-03.webp",
                 },
               },
               {
                 approachName: "Fourth approach",
                 repetitions: "12",
                 image: {
-                  jpg: "images/pullUpsChinUps-04.jpg",
-                  webp: "images/pullUpsChinUps-04.webp",
+                  jpg: "../src/assets/images/pullUpsChinUps-04.jpg",
+                  webp: "../src/assets/images/pullUpsChinUps-04.webp",
                 },
               },
             ],
@@ -106,8 +106,8 @@ export function getPageData() {
                 weight: "50 kg",
                 repetitions: "10",
                 image: {
-                  jpg: "images/barbellSquats-01.jpg",
-                  webp: "images/barbellSquats-01.webp",
+                  jpg: "../src/assets/images/barbellSquats-01.jpg",
+                  webp: "../src/assets/images/barbellSquats-01.webp",
                 },
               },
               {
@@ -115,8 +115,8 @@ export function getPageData() {
                 weight: "40 kg",
                 repetitions: "15",
                 image: {
-                  jpg: "images/barbellSquats-02.jpg",
-                  webp: "images/barbellSquats-02.webp",
+                  jpg: "../src/assets/images/barbellSquats-02.jpg",
+                  webp: "../src/assets/images/barbellSquats-02.webp",
                 },
               },
               {
@@ -124,8 +124,8 @@ export function getPageData() {
                 weight: "35 kg",
                 repetitions: "12",
                 image: {
-                  jpg: "images/barbellSquats-03.jpg",
-                  webp: "images/barbellSquats-03.webp",
+                  jpg: "../src/assets/images/barbellSquats-03.jpg",
+                  webp: "../src/assets/images/barbellSquats-03.webp",
                 },
               },
               {
@@ -133,8 +133,8 @@ export function getPageData() {
                 weight: "35 kg",
                 repetitions: "12",
                 image: {
-                  jpg: "images/barbellSquats-04.jpg",
-                  webp: "images/barbellSquats-04.webp",
+                  jpg: "../src/assets/images/barbellSquats-04.jpg",
+                  webp: "../src/assets/images/barbellSquats-04.webp",
                 },
               },
             ],
@@ -146,32 +146,32 @@ export function getPageData() {
                 approachName: "First approach",
                 repetitions: "10",
                 image: {
-                  jpg: "images/dumbbellLunges-01.jpg",
-                  webp: "images/dumbbellLunges-01.webp",
+                  jpg: "../src/assets/images/dumbbellLunges-01.jpg",
+                  webp: "../src/assets/images/dumbbellLunges-01.webp",
                 },
               },
               {
                 approachName: "Second approach",
                 repetitions: "15",
                 image: {
-                  jpg: "images/dumbbellLunges-02.jpg",
-                  webp: "images/dumbbellLunges-02.webp",
+                  jpg: "../src/assets/images/dumbbellLunges-02.jpg",
+                  webp: "../src/assets/images/dumbbellLunges-02.webp",
                 },
               },
               {
                 approachName: "Third approach",
                 repetitions: "12",
                 image: {
-                  jpg: "images/dumbbellLunges-03.jpg",
-                  webp: "images/dumbbellLunges-03.webp",
+                  jpg: "../src/assets/images/dumbbellLunges-03.jpg",
+                  webp: "../src/assets/images/dumbbellLunges-03.webp",
                 },
               },
               {
                 approachName: "Fourth approach",
                 repetitions: "12",
                 image: {
-                  jpg: "images/dumbbellLunges-04.jpg",
-                  webp: "images/dumbbellLunges-04.webp",
+                  jpg: "../src/assets/images/dumbbellLunges-04.jpg",
+                  webp: "../src/assets/images/dumbbellLunges-04.webp",
                 },
               },
             ],
