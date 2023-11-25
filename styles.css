@@ -80,7 +80,6 @@ h6 {
 }
 
 .header {
-  font-family: "Popins", sans-serif;
   background-image: url("./src/assets/images/decor.png");
   background-repeat: no-repeat;
   background-position: right center;
@@ -147,7 +146,6 @@ h6 {
 
 .wrapper {
   padding: 0 64px;
-  font-family: "Popins", sans-serif;
   font-weight: normal;
   font-style: normal;
   max-width: 1290px;
