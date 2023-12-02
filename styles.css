@@ -194,8 +194,15 @@ h6 {
 
 @media screen and (max-width: 991px) {
   .title--content,
-  .title--day {
+  .title--day,
+  .day-wrapper {
     text-align: center;
+  }
+
+  .approaches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .day {
