@@ -28,6 +28,15 @@ export function getPageData() {
                 },
               },
               {
+                approachName: "First approach",
+                weight: "50 kg",
+                repetitions: "10",
+                image: {
+                  jpg: "src/assets/images/deadlift-01.jpg",
+                  webp: "src/assets/images/deadlift-01.webp",
+                },
+              },
+              {
                 approachName: "Second approach",
                 weight: "40 kg",
                 repetitions: "15",

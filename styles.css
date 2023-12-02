@@ -229,4 +229,8 @@ h6 {
   .header .logo > img {
     height: 20px;
   }
+
+  .header .button {
+    align-self: stretch;
+  }
 }
