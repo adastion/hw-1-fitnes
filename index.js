@@ -2,8 +2,8 @@
 const headerData = {
   slogan: "Fitness",
   shortInfo: "Get fit from anywhere with our online fitness programs!",
-  logo: "images/logo.svg",
-  graphics: "images/bg-banner.png",
+  logo: "src/assets/images/logo.svg",
+  graphics: "src/assets/images/bg-banner.png",
 };
 
 const pageData = {
@@ -39,20 +39,20 @@ const pageData = {
             ],
             images: [
               {
-                jpg: "images/deadlift-01.jpg",
-                webp: "images/deadlift-01.webp",
+                jpg: "src/assets/images/deadlift-01.jpg",
+                webp: "src/assets/images/deadlift-01.webp",
               },
               {
-                jpg: "images/deadlift-02.jpg",
-                webp: "images/deadlift-02.webp",
+                jpg: "src/assets/images/deadlift-02.jpg",
+                webp: "src/assets/images/deadlift-02.webp",
               },
               {
-                jpg: "images/deadlift-03.jpg",
-                webp: "images/deadlift-03.webp",
+                jpg: "src/assets/images/deadlift-03.jpg",
+                webp: "src/assets/images/deadlift-03.webp",
               },
               {
-                jpg: "images/deadlift-04.jpg",
-                webp: "images/deadlift-04.webp",
+                jpg: "src/assets/images/deadlift-04.jpg",
+                webp: "src/assets/images/deadlift-04.webp",
               },
             ],
           },
@@ -78,20 +78,20 @@ const pageData = {
             ],
             images: [
               {
-                jpg: "images/pullUpsChinUps-01.jpg",
-                webp: "images/pullUpsChinUps-01.webp",
+                jpg: "src/assets/images/pullUpsChinUps-01.jpg",
+                webp: "src/assets/images/pullUpsChinUps-01.webp",
               },
               {
-                jpg: "images/pullUpsChinUps-02.jpg",
-                webp: "images/pullUpsChinUps-02.webp",
+                jpg: "src/assets/images/pullUpsChinUps-02.jpg",
+                webp: "src/assets/images/pullUpsChinUps-02.webp",
               },
               {
-                jpg: "images/pullUpsChinUps-03.jpg",
-                webp: "images/pullUpsChinUps-03.webp",
+                jpg: "src/assets/images/pullUpsChinUps-03.jpg",
+                webp: "src/assets/images/pullUpsChinUps-03.webp",
               },
               {
-                jpg: "images/pullUpsChinUps-04.jpg",
-                webp: "images/pullUpsChinUps-04.webp",
+                jpg: "src/assets/images/pullUpsChinUps-04.jpg",
+                webp: "src/assets/images/pullUpsChinUps-04.webp",
               },
             ],
           },
@@ -128,20 +128,20 @@ const pageData = {
             ],
             images: [
               {
-                jpg: "images/barbellSquats-01.jpg",
-                webp: "images/barbellSquats-04.webp",
+                jpg: "src/assets/images/barbellSquats-01.jpg",
+                webp: "src/assets/images/barbellSquats-04.webp",
               },
               {
-                jpg: "images/barbellSquats-02.jpg",
-                webp: "images/barbellSquats-02.webp",
+                jpg: "src/assets/images/barbellSquats-02.jpg",
+                webp: "src/assets/images/barbellSquats-02.webp",
               },
               {
-                jpg: "images/barbellSquats-03.jpg",
-                webp: "images/barbellSquats-03.webp",
+                jpg: "src/assets/images/barbellSquats-03.jpg",
+                webp: "src/assets/images/barbellSquats-03.webp",
               },
               {
-                jpg: "images/barbellSquats-04.jpg",
-                webp: "images/barbellSquats-04.webp",
+                jpg: "src/assets/images/barbellSquats-04.jpg",
+                webp: "src/assets/images/barbellSquats-04.webp",
               },
             ],
           },
@@ -167,20 +167,20 @@ const pageData = {
             ],
             images: [
               {
-                jpg: "images/dumbbellLunges-01.jpg",
-                webp: "images/dumbbellLunges-01.webp",
+                jpg: "src/assets/images/dumbbellLunges-01.jpg",
+                webp: "src/assets/images/dumbbellLunges-01.webp",
               },
               {
-                jpg: "images/dumbbellLunges-02.jpg",
-                webp: "images/dumbbellLunges-02.webp",
+                jpg: "src/assets/images/dumbbellLunges-02.jpg",
+                webp: "src/assets/images/dumbbellLunges-02.webp",
               },
               {
-                jpg: "images/dumbbellLunges-03.jpg",
-                webp: "images/dumbbellLunges-03.webp",
+                jpg: "src/assets/images/dumbbellLunges-03.jpg",
+                webp: "src/assets/images/dumbbellLunges-03.webp",
               },
               {
-                jpg: "images/dumbbellLunges-04.jpg",
-                webp: "images/dumbbellLunges-04.webp",
+                jpg: "src/assets/images/dumbbellLunges-04.jpg",
+                webp: "src/assets/images/dumbbellLunges-04.webp",
               },
             ],
           },
